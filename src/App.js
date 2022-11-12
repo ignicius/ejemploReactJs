@@ -1,5 +1,8 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+
+//// ESTE CODIGO ES JSX ////////
 
 function App() {
   return (
@@ -21,5 +24,7 @@ function App() {
     </div>
   );
 }
+
+
 
 export default App;
