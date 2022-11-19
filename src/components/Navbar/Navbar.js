@@ -1,11 +1,18 @@
+import './Navbar.css'
+
 const Navbar = () => {
+
     return (
-        <nav>
-            <h1>MyApp</h1>
-            <button>boton 1</button>
-            <button>boton 2</button>
+        <nav className="navbar">
+            <h1>iPhnicius</h1>
+            <div>
+                <button className="boton">MacBook</button>
+                <button className="boton">iPhone</button>
+                <button className="boton">iPad</button>
+            </div>
         </nav>
     )
 }
+
 
 export default Navbar
