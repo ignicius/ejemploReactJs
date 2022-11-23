@@ -1,0 +1,23 @@
+*{
+    background-color: white;
+}
+
+.grid-nav{
+    display: grid;
+    grid-template-columns: 2;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+
+.products{
+    display: flex;
+    background-color: black;
+    gap: 40px;
+    font-size: large;
+    font-weight: 500;
+}
