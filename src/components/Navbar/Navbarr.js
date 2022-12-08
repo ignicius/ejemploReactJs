@@ -1,6 +1,7 @@
 import './Navbar.css'
 import Button from '../Button/Button'
 import CartWidget from '../CartWidget/CartWidget'
+import Counter from '../Counter/Counter'
 
 
 const Navbar = (props) => {
@@ -31,7 +32,10 @@ const Navbar = (props) => {
                     <Button colorText='purple' func={handleOnClick} >iPhones</Button>
                     <Button colorText='green' func={handleOnClick2}>iPads</Button>
                     <Button colorText='grey' func={handleOnClick3}>MacBooks</Button>
-                    <Button func={handleOnClick4}><CartWidget/></Button>
+                    <div>
+                        <Button func={handleOnClick4}><CartWidget/></Button>
+                        <Counter initial={0} stock={15}/>
+                    </div>
                 </section>
             </nav>
         </div>
