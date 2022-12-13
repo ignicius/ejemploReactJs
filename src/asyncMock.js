@@ -1,4 +1,4 @@
-const products = [
+const items = [
     {
         id: 0,
         title:'iPhone 14 Pro 128gb (PURPLE)',
@@ -23,14 +23,18 @@ const products = [
     }
 ]
 
-export const getProducts = () =>{
+export const getItems = () =>{
     return new Promise((resolve) =>{
         setTimeout(() =>{
-            resolve(products)
+            resolve(items)
         },2000)
     })
 }
 
-export const getProductsById = () =>{
-    
+export const getItemsById = (id) =>{
+    return new Promise((resolve) =>{
+        setTimeout(() =>{
+            resolve(items.find(item => item.id === id))
+        },2000)
+    })
 }

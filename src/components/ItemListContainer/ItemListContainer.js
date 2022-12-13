@@ -1,7 +1,26 @@
-const ItemListContainer = ({greeting}) => {
-    // const {greeting} = props // se desestructura y se pone greetings como variable --- sin llaves no seria desestrcturado, sino seria una variable y no arrojaria mismo resultado.
+import { useState, useEffect } from "react"
+import ItemList from '../ItemList/ItemList'
+import { getItems } from "../../asyncMock"
+
+const ItemListContainer =   () => {
+    const [items, setItems] = useState ([])
+
+    useEffect(() => {
+        getItems()
+            .then(response => {
+                setItems(response)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }, [])
     
-    return <h1>{greeting}</h1>     
+    return(
+        <div>
+            <h1>Productos</h1>
+            <ItemList />
+        </div>
+        )     
 }
 
 export default ItemListContainer
