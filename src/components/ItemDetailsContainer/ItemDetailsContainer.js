@@ -29,7 +29,7 @@ const ItemDetailsContainer =   () => {
 
     return(
         <div>
-            {/* <img alt="img">{item.img}</img> */}
+            <img alt="img">{item.img}</img>
             <h1>{item.title}</h1>
             <h2>{item.price}</h2>
             <p>{item.category}</p>
