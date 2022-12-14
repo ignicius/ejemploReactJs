@@ -1,3 +1,4 @@
+import React from 'react'
 import { Link } from "react-router-dom"
 
 const Item = ({ item }) => {
@@ -7,7 +8,7 @@ const Item = ({ item }) => {
             <h2>{item.title}</h2>
             <h3>{item.description}</h3>
             <p>{item.price}</p>
-            <Link to={'/item/${item.id}'}>Ver detalles</Link> 
+            <Link to={`/item/${item.id}`}>Ver detalles</Link> 
         </div>
 
     )

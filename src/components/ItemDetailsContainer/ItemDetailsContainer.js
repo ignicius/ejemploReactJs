@@ -1,19 +1,19 @@
 import { useState, useEffect } from "react"
+import React from "react"
 import { useParams } from "react-router-dom"
 import { getItemsById } from "../../asyncMock"
 
 
 const ItemDetailsContainer =   () => {
-    const [items, setItems] = useState ([])
+    const [item, setItem] = useState ([])
     const [isLoading, setIsLoading] = useState(true)
 
-    const params = useParams()
-    console.log(params)
+    const itemId = useParams()
 
     useEffect(() => {
-        getItemsById(params.itemId)
+        getItemsById(itemId)
             .then(response => {
-                setItems(response)
+                setItem(response)
             })
             .catch(error => {
                 console.log(error)
@@ -21,15 +21,18 @@ const ItemDetailsContainer =   () => {
             .finally(() => {
                 setIsLoading(false)
             })
-    }, [])
+    }, [itemId])
     
     if (isLoading) {
         return <h1>Cargando Productos...</h1>
     }
+
     return(
         <div>
-            <h1>Productos</h1>
-            <ItemList items={items} />
+            {/* <img alt="img">{item.img}</img> */}
+            <h1>{item.title}</h1>
+            <h2>{item.price}</h2>
+            <p>{item.category}</p>
         </div>
         )     
 }
