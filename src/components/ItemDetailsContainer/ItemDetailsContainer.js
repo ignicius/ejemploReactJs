@@ -11,7 +11,7 @@ const ItemDetailsContainer =   () => {
 
     const { addItem, isInCart, removeitem } = useContext(CartContext)
 
-    const itemId = useParams()
+    const { itemId } = useParams()
 
     useEffect(() => {
         getItemsById(itemId)
