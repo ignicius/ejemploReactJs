@@ -15,9 +15,13 @@
 }
 
 .products{
+    color: purple;
     display: flex;
-    background-color: black;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
     gap: 40px;
     font-size: large;
     font-weight: 500;
+
 }

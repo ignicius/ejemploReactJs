@@ -13,12 +13,12 @@ const items = [
         title:'iPad Pro 11" M2 128gb (SPACE)',
         description:'Nuevo Lanzamiento',
         price: 1450,
-        img:'./public/images/.jpg',
+        img:'./images/ipad.jpg',
         category:'iPad'
     },
     {
         id: 2,
-        title:'MacBook Air M2 256gb SSD (SILVER)',
+        title:'MacBook Pro M2 256gb SSD (SILVER)',
         description:'Teclado Español',
         price: 2500,
         img:'./images/MbPro.jpeg',

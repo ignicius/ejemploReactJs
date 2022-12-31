@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Navbar.css'
 import Button from '../Button/Button'
 import CartWidget from '../CartWidget/CartWidget'
 import Counter from '../Counter/Counter'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
+import { CartContext } from '../../context/CartContext'
 
 
 const Navbar = () => {
 
-   
+   const { cart } = useContext(CartContext)
     return (
         <div className='grid-nav'>
             <nav className='navbar'>
@@ -19,7 +20,15 @@ const Navbar = () => {
                     <NavLink to='/category/iPhone'>iPhones</NavLink>
                     <NavLink to='/category/iPad'>iPad</NavLink>
                     <NavLink to='/category/MacBook'>MacBook</NavLink>
-                    <div>
+                    
+                        <Link to='/cart'>
+                            Cart: {cart.length}
+                        </Link>
+                    
+                    
+                    <Link to='/login'>Login</Link>
+                    
+                    <div>                    
                         <Button><CartWidget/></Button>
                         <Counter initial={0} stock={15}/>
                     </div>
